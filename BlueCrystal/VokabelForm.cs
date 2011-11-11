@@ -224,7 +224,7 @@ namespace BlueCrystal
                 }
             }
 
-            if (pictures && File.Exists(Path.Combine(Program.DataFolderPath,teile[0].BildUri)))
+            if (pictures && teile[0].BildUri != null && File.Exists(Path.Combine(Program.DataFolderPath,teile[0].BildUri)))
             {
                 pictureBox.Image = Image.FromFile(Path.Combine(Program.DataFolderPath,teile[0].BildUri));
                 pictureBox.Visible = true;
